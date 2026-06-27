@@ -28,12 +28,13 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#05051080] backdrop-blur-xl border-b border-[#9945FF22]" : "bg-transparent"}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-lg flex items-center justify-center text-black font-black font-orbitron text-sm" style={{ background: "linear-gradient(135deg, #9945FF, #14F195)" }}>VI</div>
-          <span className="font-orbitron font-bold text-base sm:text-lg tracking-widest gradient-text-sol">GTA VI</span>
-          <span className="hidden sm:inline text-[#9945FF44] font-light ml-1">×</span>
-          <span className="hidden sm:inline text-xs font-semibold text-[#14F195] tracking-widest">SOLANA</span>
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 py-3 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3">
+          <img src="/icons.jpg" alt="GTA VI × SOLANA" className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-cover" />
+          <div className="flex flex-col leading-none">
+            <span className="font-orbitron font-black text-sm sm:text-base tracking-widest gradient-text-sol">GTA VI</span>
+            <span className="text-[0.65rem] sm:text-sm font-semibold text-[#14F195] tracking-widest">× SOLANA</span>
+          </div>
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase">

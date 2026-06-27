@@ -57,13 +57,10 @@ export default function CountdownTimer() {
   return (
     <div className="flex flex-col items-center gap-4">
       <p className="font-orbitron text-sm tracking-[0.3em] text-[#14F195] uppercase">{t("hero_countdown")}</p>
-      <div className="flex items-start gap-3 sm:gap-5">
-        <Pad n={time.days}    label={t("cnt_days")} />
-        <div className="text-3xl sm:text-4xl font-bold text-[#9945FF] mt-5 sm:mt-7" style={{textShadow:"0 0 10px #9945FF"}}>:</div>
-        <Pad n={time.hours}   label={t("cnt_hours")} />
-        <div className="text-3xl sm:text-4xl font-bold text-[#9945FF] mt-5 sm:mt-7" style={{textShadow:"0 0 10px #9945FF"}}>:</div>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-xl">
+        <Pad n={time.days} label={t("cnt_days")} />
+        <Pad n={time.hours} label={t("cnt_hours")} />
         <Pad n={time.minutes} label={t("cnt_minutes")} />
-        <div className="text-3xl sm:text-4xl font-bold text-[#9945FF] mt-5 sm:mt-7" style={{textShadow:"0 0 10px #9945FF"}}>:</div>
         <Pad n={time.seconds} label={t("cnt_seconds")} />
       </div>
     </div>

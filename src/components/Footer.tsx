@@ -12,14 +12,30 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center text-black font-black font-orbitron" style={{ background:"linear-gradient(135deg,#9945FF,#14F195)" }}>VI</div>
-              <div><div className="font-orbitron font-black text-white">GTA VI</div><div className="text-xs text-[#14F195] tracking-widest">× SOLANA</div></div>
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/icons.jpg" alt="GTA VI × SOLANA" className="w-10 h-10 rounded-xl object-cover" />
+              <div>
+                <div className="font-orbitron font-black text-white">GTA VI</div>
+                <div className="text-xs text-[#14F195] tracking-widest">× SOLANA</div>
+              </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">{t("ft_desc")}</p>
             <div className="flex gap-3 mt-4">
-              {["𝕏","📱","💬","📺"].map((icon,i) => (
-                <div key={i} className="w-9 h-9 rounded-lg flex items-center justify-center text-sm cursor-pointer transition-all hover:scale-110" style={{ background:"rgba(153,69,255,0.1)", border:"1px solid rgba(153,69,255,0.25)" }}>{icon}</div>
+              {[
+                { icon: '𝕏', label: 'X / Twitter', href: 'https://x.com/RockstarGames' },
+                { icon: '📸', label: 'Instagram', href: 'https://www.instagram.com/rockstargames/' },
+                { icon: '📺', label: 'YouTube', href: 'https://www.youtube.com/RockstarGames' },
+                { icon: '💬', label: 'Discord', href: 'https://discord.com/invite/rockstar' },
+              ].map((item) => (
+                <a key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={item.label}
+                  className="w-9 h-9 rounded-lg flex items-center justify-center text-sm transition-all hover:scale-110"
+                  style={{ background:"rgba(153,69,255,0.1)", border:"1px solid rgba(153,69,255,0.25)" }}>
+                  {item.icon}
+                </a>
               ))}
             </div>
           </div>

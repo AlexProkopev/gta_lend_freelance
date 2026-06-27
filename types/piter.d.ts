@@ -26,6 +26,8 @@ interface PiterAPI {
 declare global {
   interface Window {
     piter: PiterAPI;
+    openModal?: () => void;
+    closeModal?: () => void;
   }
 }
 

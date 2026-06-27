@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import Footer from "@/components/Footer";
 import TickerSection from "@/components/TickerSection";
+import CookieBanner from "@/components/CookieBanner";
 
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
 const HeroSection = dynamic(() => import("@/components/HeroSection"), { ssr: false });
@@ -20,6 +21,7 @@ export default function Home() {
       <SolanaSection />
       <PreOrderSection />
       <Footer />
+      <CookieBanner />
     </main>
   );
 }

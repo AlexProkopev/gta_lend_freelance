@@ -146,9 +146,15 @@ const en: T = {
   gallery_label:
     "Vice City — the largest and most detailed GTA world ever",
   gallery1: "Grand Theft Auto VI",
-  gallery2: "Official Poster",
+  gallery2: "Cal Hampton",
   gallery3: "Vice City",
   gallery4: "Jason & Lucia",
+
+  // Cookie banner
+  cookie_title: "We use cookies to improve the experience",
+  cookie_text: "By accepting, you agree to local storage for language and session state.",
+  cookie_accept: "Accept",
+  cookie_reject: "Reject",
 
   // Ticker
   tick1: "🎮 GTA VI — November 19, 2026",
@@ -302,7 +308,7 @@ const es: T = {
   success_ordered: "Ordenaste:",
   gallery_label: "Vice City — el mundo más grande y detallado de GTA",
   gallery1: "Grand Theft Auto VI",
-  gallery2: "Póster Oficial",
+  gallery2: "Cal Hampton",
   gallery3: "Vice City",
   gallery4: "Jason y Lucía",
 
@@ -454,10 +460,14 @@ const fr: T = {
   success_desc:
     "Transaction confirmée sur Solana. GTA VI sort le 19 novembre 2026.",
   success_ordered: "Vous avez commandé:",
+  cookie_title: "Nous utilisons des cookies pour améliorer l'expérience",
+  cookie_text: "En acceptant, vous autorisez le stockage local pour la langue et l'état de la session.",
+  cookie_accept: "Accepter",
+  cookie_reject: "Refuser",
   gallery_label:
     "Vice City — le monde le plus grand et détaillé de GTA",
   gallery1: "Grand Theft Auto VI",
-  gallery2: "Affiche Officielle",
+  gallery2: "Cal Hampton",
   gallery3: "Vice City",
   gallery4: "Jason et Lucia",
 

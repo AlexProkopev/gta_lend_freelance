@@ -91,16 +91,13 @@ export default function AdminPage() {
         >
           {/* Logo */}
           <div className="text-center mb-8">
-            <div
-              className="inline-flex items-center justify-center w-16 h-16 rounded-2xl text-black font-black font-orbitron text-2xl mb-4"
-              style={{ background: "linear-gradient(135deg, #9945FF, #14F195)" }}
-            >
-              VI
-            </div>
-            <h1 className="font-orbitron font-black text-2xl text-white">
-              Панель управления
-            </h1>
-            <p className="text-gray-500 text-sm mt-1">GTA VI × Solana — Admin</p>
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl overflow-hidden mb-4">
+            <img src="/icons.jpg" alt="GTA VI × SOLANA" className="w-full h-full object-cover" />
+          </div>
+          <h1 className="font-orbitron font-black text-2xl text-white">
+            Панель управления
+          </h1>
+          <p className="text-gray-500 text-sm mt-1">GTA VI × Solana — Admin</p>
           </div>
 
           <form onSubmit={handleLogin} className="flex flex-col gap-4">
@@ -186,11 +183,8 @@ export default function AdminPage() {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div
-              className="w-9 h-9 rounded-lg flex items-center justify-center text-black font-black font-orbitron text-sm"
-              style={{ background: "linear-gradient(135deg, #9945FF, #14F195)" }}
-            >
-              VI
+            <div className="w-9 h-9 rounded-lg overflow-hidden">
+              <img src="/icons.jpg" alt="GTA VI × SOLANA" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="font-orbitron font-bold text-white text-sm">Admin Panel</p>
