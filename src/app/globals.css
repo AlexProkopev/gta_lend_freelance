@@ -1,26 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --sol-purple: #9945FF;
+  --sol-green: #14F195;
+  --gta-pink: #FF2D78;
+  --gta-cyan: #00D4FF;
+  --gta-gold: #FFD700;
+  --dark: #050510;
+  --dark2: #0a0a1a;
+  --background: #050510;
+  --foreground: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--dark);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a1a; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#9945FF, #14F195); border-radius: 3px; }
+
+.gradient-text-sol {
+  background: linear-gradient(135deg, #9945FF, #14F195);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text-gta {
+  background: linear-gradient(135deg, #FF2D78, #FFD700, #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text-mixed {
+  background: linear-gradient(135deg, #FF2D78, #9945FF, #14F195);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.neon-purple { text-shadow: 0 0 10px #9945FF, 0 0 30px #9945FF55; }
+.neon-green  { text-shadow: 0 0 10px #14F195, 0 0 30px #14F19555; }
+.neon-pink   { text-shadow: 0 0 10px #FF2D78, 0 0 30px #FF2D7855; }
+
+.border-glow-purple { border: 1px solid #9945FF44; box-shadow: 0 0 20px #9945FF22, inset 0 0 20px #9945FF11; }
+.border-glow-green  { border: 1px solid #14F19544; box-shadow: 0 0 20px #14F19522, inset 0 0 20px #14F19511; }
+.border-glow-pink   { border: 1px solid #FF2D7844; box-shadow: 0 0 20px #FF2D7822, inset 0 0 20px #FF2D7811; }
+
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-sol {
+  background: linear-gradient(135deg, #9945FF, #14F195);
+  border: none;
+  color: #000;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn-sol:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #9945FF55; filter: brightness(1.1); }
+
+.btn-gta {
+  background: linear-gradient(135deg, #FF2D78, #FFD700);
+  border: none;
+  color: #000;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-gta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px #FF2D7855; }
+
+.glass-card        { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
+.glass-card-purple { background: rgba(153,69,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(153,69,255,0.2); }
+.glass-card-pink   { background: rgba(255,45,120,0.06);  backdrop-filter: blur(12px); border: 1px solid rgba(255,45,120,0.2); }
+
+@keyframes float        { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes pulse-glow   { 0%,100%{box-shadow:0 0 20px #9945FF44} 50%{box-shadow:0 0 50px #9945FF88,0 0 80px #14F19533} }
+@keyframes ticker       { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+@keyframes fadeInUp     { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+@keyframes zoomIn       { from{opacity:0;transform:scale(0.95)} to{opacity:1;transform:scale(1)} }
+@keyframes slideInLeft  { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
+@keyframes slideInRight { from{opacity:0;transform:translateX(40px)} to{opacity:1;transform:translateX(0)} }
+@keyframes grid-flow    { 0%{background-position:0 0} 100%{background-position:0 60px} }
+@keyframes borderPulse  { 0%,100%{border-color:rgba(153,69,255,0.3)} 50%{border-color:rgba(20,241,149,0.6)} }
+
+.animate-float       { animation: float 4s ease-in-out infinite; }
+.animate-pulse-glow  { animation: pulse-glow 3s ease-in-out infinite; }
+.animate-fadeInUp    { animation: fadeInUp 0.7s ease forwards; }
+.animate-zoomIn      { animation: zoomIn 0.7s ease forwards; }
+.animate-slideInLeft { animation: slideInLeft 0.7s ease forwards; }
+.animate-slideInRight{ animation: slideInRight 0.7s ease forwards; }
+
+.ticker-wrap  { overflow: hidden; white-space: nowrap; }
+.ticker-inner { display: inline-flex; animation: ticker 35s linear infinite; }
+
+.hero-grid {
+  background-image: linear-gradient(rgba(153,69,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(153,69,255,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-flow 10s linear infinite;
+}
+
+h1, h2, h3 { font-family: 'Rajdhani', sans-serif; }
+.font-orbitron { font-family: 'Orbitron', sans-serif; }
+
+.wallet-adapter-button {
+  background: linear-gradient(135deg, #9945FF, #14F195) !important;
+  color: #000 !important;
+  font-family: 'Rajdhani', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  height: 48px !important;
+  padding: 0 24px !important;
+  transition: all 0.3s ease !important;
+}
+.wallet-adapter-button:hover {
+  filter: brightness(1.15) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(153,69,255,0.4) !important;
+}
+.wallet-adapter-modal-wrapper {
+  background: #0a0a1a !important;
+  border: 1px solid rgba(153,69,255,0.3) !important;
+}
+
+.edition-card { transition: all 0.3s ease; cursor: pointer; }
+.edition-card:hover { transform: translateY(-8px); }
+.edition-card.selected { border-color: #14F195 !important; box-shadow: 0 0 30px rgba(20,241,149,0.3); }
+
+.hero-bg {
+  background-image:
+    linear-gradient(to bottom, rgba(5,5,16,0) 0%, rgba(5,5,16,0.6) 60%, rgba(5,5,16,1) 100%),
+    url('https://www.rockstargames.com/VI/img/home/bg-key-art.jpg');
+  background-size: cover;
+  background-position: center top;
+}
+
